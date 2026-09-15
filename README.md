@@ -1,151 +1,316 @@
-![snipe-it-by-grok](https://github.com/grokability/snipe-it/assets/197404/b515673b-c7c8-4d9a-80f5-9fa58829a602)
+# 🏢 CADFEM Asset Management System
 
-> **CADFEM Asset Management** - This is a customized version of Snipe-IT, rebranded and tailored for CADFEM's asset management needs.
+> **Enterprise-grade Asset Management Platform** - Modern, Professional IT Asset Tracking System built on Laravel 12
 
-[![Crowdin](https://d322cqt584bo4o.cloudfront.net/snipe-it/localized.svg)](https://crowdin.com/project/snipe-it) [![Docker Pulls](https://img.shields.io/docker/pulls/snipe/snipe-it.svg)](https://hub.docker.com/r/snipe/snipe-it/)  [![Tests in MySQL](https://github.com/grokability/snipe-it/actions/workflows/tests-mysql.yml/badge.svg)](https://github.com/grokability/snipe-it/actions/workflows/tests-mysql.yml)
-[![All Contributors](https://img.shields.io/badge/all_contributors-331-orange.svg?style=flat-square)](#contributing) [![Discord](https://badgen.net/badge/icon/discord?icon=discord&label)](https://discord.gg/yZFtShAcKk)
+[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%203.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0) [![Laravel 12](https://img.shields.io/badge/Laravel-12-FF2D20?logo=laravel&logoColor=white)](https://laravel.com) [![PHP 8.5+](https://img.shields.io/badge/PHP-8.5+-777BB4?logo=php&logoColor=white)](https://www.php.net) [![MySQL](https://img.shields.io/badge/MySQL-5.7+-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com)
 
-## CADFEM Asset Management - Open Source Asset Management System
+---
 
-CADFEM Asset Management is a customized version of Snipe-IT, an open-source asset management system for IT Operations. Track assets, manage depreciation, handle software licenses, and more.
+## 📋 Overview
 
-**Based on:** [Snipe-IT](https://github.com/grokability/snipe-it) - Open Source Asset Management System
+**CADFEM Asset Management** is a modern, open-source IT asset management system designed for enterprises. Track equipment, manage depreciation, handle software licenses, and maintain complete IT inventory with professional dashboards and real-time insights.
 
-This is a FOSS project that can track IT equipment and manage software licenses. Know who has which equipment, when it was purchased for proper depreciation, handle software licensing, etc.
+### ✨ Key Features
 
-It is built on [Laravel 12](http://laravel.com).
+- **🎯 Equipment Dashboard** - Real-time KPI metrics with interactive ApexCharts visualizations
+- **📊 Asset Analytics** - Comprehensive asset distribution by category, status, and location
+- **💰 Depreciation Tracking** - Automatic depreciation calculations and financial reporting
+- **📄 Software Licensing** - License management, compliance tracking, and renewal alerts
+- **🏢 Multi-Location Support** - Manage assets across multiple offices and departments
+- **👥 User Management** - Role-based access control and team permissions
+- **📱 Responsive Design** - Works seamlessly on desktop, tablet, and mobile
+- **🔍 Advanced Search** - Powerful filtering and search capabilities
+- **📈 Reports** - Generate detailed asset and financial reports
 
-Snipe-IT is actively developed and we [release quite frequently](https://github.com/grokability/snipe-it/releases). ([Check out the live demo here](https://snipeitapp.com/demo/).)
+---
 
-> [!TIP]
-> __This is web-based software__. This means there is no executable file (aka no .exe files), and it must be run on a web server and accessed through a web browser. It runs on any Mac OSX, any flavor of Linux, as well as Windows, and we have a [Docker image](https://snipe-it.readme.io/docs/docker) available if that's what you're into.
+## 🚀 Quick Start
 
------
+### Prerequisites
 
-### Table of Contents
-* [Installation](#installation)
-* [User's Manual](#users-manual)
-* [Bug Reports & Feature Requests](#bug-reports--feature-requests)
-* [Security](#security)
-* [Upgrading](#upgrading)
-* [Translations!](#translations-)
-* [Libraries, Modules & Related Projects](#libraries-modules--related-projects)
-* [Join the Community!](#join-the-community)
-* [Contributing](#contributing)
-* [Announcement List](#announcement-list)
-
-
------
+- PHP 8.5.10+
+- MySQL 5.7+ or MariaDB 10.3+
+- Composer
+- Node.js & npm
 
 ### Installation
 
-For instructions on installing and configuring Snipe-IT on your server, check out the [installation manual](https://snipe-it.readme.io/docs). (Please see the [requirements documentation](https://snipe-it.readme.io/docs/requirements) for full requirements.)
+1. **Clone the repository**
+```bash
+git clone https://github.com/PrasanthDudala03/cadfem-asset-management.git
+cd cadfem-asset-management
+```
 
-If you're having trouble with the installation, please check the [Common Issues](https://snipe-it.readme.io/docs/common-issues) and [Getting Help](https://snipe-it.readme.io/docs/getting-help) documentation, and search this repository's open *and* closed issues for help.
+2. **Install PHP dependencies**
+```bash
+composer install
+```
 
------
-### User's Manual
-For help using Snipe-IT, check out the [user's manual](https://snipe-it.readme.io/docs/overview).
+3. **Install Node dependencies**
+```bash
+npm install
+npm run build
+```
 
------
-### Bug Reports & Feature Requests
+4. **Configure environment**
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-Feel free to check out the [GitHub Issues for this project](https://github.com/grokability/snipe-it/issues) to open a bug report or see what open issues you can help with. Please search through existing issues (open *and* closed) to see if your question has already been answered before opening a new issue.
+5. **Setup database**
+```bash
+# Create MySQL database
+mysql -u root -p -e "CREATE DATABASE snipeit CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 
-> [!IMPORTANT]  
-> **PLEASE see the [Getting Help Guidelines](https://snipe-it.readme.io/docs/getting-help) and [Common Issues](https://snipe-it.readme.io/docs/common-issues) before opening a ticket, and be sure to complete all of the questions in the Github Issue template to help us to help you as quickly as possible.**
+# Update .env with database credentials
+# DB_DATABASE=snipeit
+# DB_USERNAME=root
+# DB_PASSWORD=your_password
 
------
+php artisan migrate
+php artisan db:seed
+```
 
-### Security
+6. **Start the server**
+```bash
+php artisan serve --host=localhost --port=8000
+```
 
-> [!IMPORTANT]
-> **To report a security vulnerability, please email security@snipeitapp.com instead of using the issue tracker.**
------
+Access the application at: **http://localhost:8000**
 
+---
 
-### Upgrading
+## 📊 Dashboard Features
 
-Please see the [upgrading documentation](https://snipe-it.readme.io/docs/upgrading) for instructions on upgrading Snipe-IT.
+### Equipment Dashboard
+- **Total Assets** - Complete inventory count
+- **Active Assets** - Currently deployed equipment
+- **In Maintenance** - Assets undergoing repairs
+- **Retired Assets** - Decommissioned equipment
 
-------
-### Translations!
+### Visualizations
+- **Asset Status Distribution** - Donut chart showing deployment status
+- **Assets by Category** - Bar chart breakdown by equipment type
+- **Recent Assets** - Latest deployments with full details
+- **Location Analytics** - Asset distribution by office/location
 
-Please see the [translations documentation](https://snipe-it.readme.io/docs/translations) for information about available languages and how to add translations to Snipe-IT.
+---
 
------
+## 🏗️ Project Structure
 
-### Libraries, Modules & Related Projects
+```
+cadfem-asset-management/
+├── app/
+│   ├── Http/Controllers/EquipmentDashboardController.php
+│   ├── Models/
+│   └── Services/
+├── database/
+│   ├── migrations/
+│   ├── seeders/
+│   │   ├── ImportSimpleAssetsSeeder.php
+│   │   └── SettingsSeeder.php
+│   └── deployed_assets_2026.csv
+├── resources/
+│   ├── views/
+│   │   ├── dashboard/
+│   │   │   └── equipment.blade.php
+│   │   └── layouts/
+│   ├── css/
+│   │   └── cadfem-branding.css
+│   └── js/
+├── public/
+│   ├── css/
+│   ├── img/
+│   │   ├── cadfem-logo.svg
+│   │   └── cadfem-logo-full.svg
+│   └── js/
+├── routes/
+│   └── web.php
+└── storage/
+    └── deployed_assets_2026.csv
+```
 
-Since the release of the JSON REST API, several third-party developers have been developing modules and libraries to work with Snipe-IT.  
+---
 
-> [!NOTE]  
-> As these were created by third-parties, Snipe-IT cannot provide support for these project, and you should contact the developers directly if you need assistance. Additionally, Snipe-IT makes no guarantees as to the reliability, accuracy or maintainability of these libraries. Use at your own risk. :)
+## 🎨 Branding & Customization
 
-#### Libraries & Modules
+CADFEM Asset Management uses custom branding throughout:
 
-- [SnipeScheduler](https://github.com/JSY-Ben/SnipeScheduler) by [@JSY-Ben](https://github.com/JSY-Ben) - An Asset Reservation/Checkout System for Snipe-IT
-- [Snipe-IT MCP Server](https://github.com/jameshgordy/snipeit-mcp) by [@jameshgordy](https://github.com/jameshgordy) - A Model Context Protocol (MCP) server for managing Snipe-IT inventory systems
-- [SnipeSharp - .NET module in C#](https://github.com/barrycarey/SnipeSharp) by [@barrycarey](https://github.com/barrycarey)
-- [SnipeitPS](https://github.com/snazy2000/SnipeitPS) by [@snazy2000](https://github.com/snazy2000) - Powershell API Wrapper for Snipe-it
-- [jamf2snipe](https://github.com/grokability/jamf2snipe) - Python script to sync assets between a JAMFPro instance and a Snipe-IT instance
-- [jamf-snipe-rename](https://macblog.org/jamf-snipe-rename/) - Python script to rename computers in Jamf from Snipe-IT
-- [Snipe-IT plugin for Jira Service Desk](https://marketplace.atlassian.com/apps/1220964/snipe-it-for-jira)
-- [Rudder2Snipe](https://github.com/norbertoaquino/rudder2snipe) by [@norbertoaquino](https://github.com/norbertoaquino) - Rudder.io integration for Snipe-IT
-- [Python 3 CSV importer](https://github.com/gastamper/snipeit-csvimporter) - allows importing assets into Snipe-IT based on Item Name rather than Asset Tag.
-- [Snipe-IT Kubernetes Helm Chart](https://github.com/t3n/helm-charts/tree/master/snipeit) - For more information, [click here](https://hub.helm.sh/charts/t3n/snipeit).
-- [Snipe-IT Bulk Edit](https://github.com/bricelabelle/snipe-it-bulkedit) - Google Script files to use Google Sheets as a bulk checkout/checkin/edit tool for Snipe-IT.
-- [MosyleSnipeSync](https://github.com/RodneyLeeBrands/MosyleSnipeSync) by [@Karpadiem](https://github.com/Karpadiem) - Python script to synchronize information between Mosyle and Snipe-IT.
-- [WWW::SnipeIT](https://github.com/SEDC/perl-www-snipeit) by [@SEDC](https://github.com/SEDC) - perl module for accessing the API
-- [UniFi to Snipe-IT](https://www.edtechirl.com/p/snipe-it-and-azure-asset-management) originally by [@karpadiem](https://github.com/karpadiem) - Python script that synchronizes UniFi devices with Snipe-IT.
-- [Kandji2Snipe](https://github.com/grokability/kandji2snipe) by [@briangoldstein](https://github.com/briangoldstein) - Python script that synchronizes Kandji with Snipe-IT.
-- [SnipeAgent](https://github.com/ReticentRobot/SnipeAgent) by [@ReticentRobot](https://github.com/ReticentRobot) - Windows agent for Snipe-IT.
-- [Gate Pass Generator](https://github.com/cha7uraAE/snipe-it-gate-pass-system) by [@cha7uraAE](https://github.com/cha7uraAE) - A Streamlit application for generating gate passes based on hardware data from a Snipe-IT API.
-- [InQRy (archived)](https://github.com/Microsoft/InQRy) by [@Microsoft](https://github.com/Microsoft)
-- [Marksman (archived)](https://github.com/Scope-IT/marksman) - A Windows agent for Snipe-IT
-- [Python Module (archived)](https://github.com/jbloomer/SnipeIT-PythonAPI) by [@jbloomer](https://github.com/jbloomer)
-[IT-Tools](https://github.com/chrisnox/Snipeit-it-tools) by @chrisnox - Browser bookmarklets for PDF handover/return protocols, digital signatures, label printing (Zebra ZD410), AirWatch MDM sync and Lansweeper CSV import.
+- **Primary Color**: #003366 (Professional Navy Blue)
+- **Secondary Colors**: #28a745 (Green), #ffc107 (Gold), #dc3545 (Red)
+- **Logo**: Custom CADFEM SVG logos included
+- **Styling**: Modern gradient backgrounds, rounded cards, professional shadows
 
-We also have a handful of [Google Apps scripts](https://github.com/grokability/google-apps-scripts-for-snipe-it) to help with various tasks.
+All branding can be customized in:
+- `public/css/cadfem-branding.css` - Color variables and styles
+- `public/img/` - Logo files
+- `config/app.php` - Application name and settings
+- `.env` - Site configuration
 
-#### Mobile Apps
+---
 
-We're currently working on our own mobile app, but in the meantime, check out these third-party apps that work with Snipe-IT:
+## 📦 Asset Import
 
-- [SnipeMate](https://snipemate.app/) (iOS, Google Play, Huawei AppGallery) by Mars Technology
-- [Snipe-Scan](https://apps.apple.com/do/app/snipe-scan/id6744179400?uo=2) (iOS) by Nicolas Maton
-- [Snipe-IT Assets Management](https://play.google.com/store/apps/details?id=com.diegogarciadev.assetsmanager.snipeit&hl=en&pli=1) (Google Play) by DiegoGarciaDEV
-- [AssetX](https://apps.apple.com/my/app/assetx-for-snipe-it/id6741996196?uo=2) (iOS) for Snipe-IT by Rishi Gupta
+Import assets from CSV file with automated seeder:
 
------
+```bash
+# Place CSV file at: storage/app/deployed_assets_2026.csv
+# Run seeder
+php artisan db:seed --class=ImportSimpleAssetsSeeder
+```
 
-### Join the Community!
+**CSV Format:**
+```csv
+Asset Tag,Serial,Model,Manufacturer,Category,Location,Notes
+FN-E16-02,SN123456,LENOVO E16G1,Lenovo,Laptop,Hyderabad,Active deployment
+CFD-3680-04,SN789012,Dell T3680,Dell,CPU,Hyderabad,Server deployment
+```
 
-- **[Join our Discord](https://discord.gg/yZFtShAcKk)!** It’s full of great people. We even wrote about it [here](https://grokstar.dev/culture/2024/06/the-unlikely-rise-of-discord-as-a-support-channel/)!
-- **Follow us on Bluesky** at [@snipeitapp.com](https://bsky.app/profile/snipeitapp.com)
-- **Follow us on Mastodon** at [hachyderm.io/@grokability](https://hachyderm.io/@grokability)
-- **Follow our blog** at [Grokstar.Dev](https://grokstar.dev)
-- **Subscribe here** on Github for notifications about new releases. (We recommend selecting "Releases" only for most users - this repo can get noisy.)
+---
 
------
+## 🔐 Security
 
-### Contributing
+- **AGPL-3.0 License** - Open source, respecting community principles
+- **Laravel Security** - Built-in CSRF protection, SQL injection prevention
+- **Authentication** - Secure user login with email verification
+- **Authorization** - Role-based access control (RBAC)
+- **Encryption** - Sensitive data encrypted at rest
 
-**Please refrain from submitting issues or pull requests generated by fully-automated tools. Maintainers reserve the right, at their sole discretion, to close such submissions and to block any account responsible for them.** Please see our [AI Contribution Policy](https://snipe-it.readme.io/docs/contributing-overview#ai-usage-policy) for more information.
+---
 
-Contributions should follow from a human-to-human discussion in the form of an issue for the best chances of being merged into the core project. (Sometimes we might already be working on that feature, sometimes we've decided against )
+## 📝 API Endpoints
 
-Please see the complete documentation on [contributing and developing for Snipe-IT](https://snipe-it.readme.io/docs/contributing-overview).
+```
+GET  /api/dashboard/data                    - Dashboard KPI metrics
+GET  /api/dashboard/status-distribution     - Asset status breakdown
+GET  /api/dashboard/category-distribution   - Assets by category
+```
 
-This project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+---
 
-The ERD is available [online here](https://drawsql.app/templates/snipe-it).
+## 🛠️ Configuration
 
-Be sure to check out all of the [amazing people](CONTRIBUTORS.md) that have contributed to Snipe-IT over the years!
+### Environment Variables (.env)
 
-------
-### Announcement List
+```env
+APP_NAME="CADFEM Asset Management"
+APP_ENV=production
+APP_DEBUG=false
+APP_URL=http://localhost:8000
 
-To be notified of important news (such as new releases, security advisories, etc), [sign up for our list](http://eepurl.com/XyZKz). We'll never sell or give away your info, and we'll only email you when it's important. 
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=snipeit
+DB_USERNAME=root
+DB_PASSWORD=your_password
 
-We also usually make smaller announcements on our social accounts, our Discord, and our blog, so be sure to subscribe to those if you're looking for more granular announcements.
+MAIL_FROM_ADDRESS=prashanth.d@cadfem.ai
+MAIL_FROM_NAME="CADFEM Asset Management"
+
+# Branding
+SITE_NAME="CADFEM Asset Management"
+HEADER_COLOR=#003366
+```
+
+---
+
+## 📚 Documentation
+
+- **[Installation Guide](./docs/INSTALLATION.md)** - Detailed setup instructions
+- **[User Manual](./docs/USER_MANUAL.md)** - Complete feature documentation
+- **[API Documentation](./docs/API.md)** - REST API reference
+- **[Troubleshooting](./docs/TROUBLESHOOTING.md)** - Common issues & solutions
+
+---
+
+## 🐛 Bug Reports & Support
+
+Found a bug? Have a feature request?
+
+- **GitHub Issues**: https://github.com/PrasanthDudala03/cadfem-asset-management/issues
+- **Email Support**: prashanth.d@cadfem.ai
+- **Documentation**: Check the docs/ folder first
+
+---
+
+## 📄 License
+
+This project is licensed under the **AGPL-3.0 License** - see the [LICENSE](LICENSE) file for details.
+
+### Attribution
+
+This project is based on [Snipe-IT](https://github.com/grokability/snipe-it), an excellent open-source asset management system. We maintain full compliance with the AGPL-3.0 license and contribute improvements back to the community.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 📊 Technology Stack
+
+| Technology | Purpose |
+|-----------|---------|
+| **Laravel 12** | Backend framework |
+| **PHP 8.5** | Server-side language |
+| **MySQL 5.7+** | Database |
+| **Bootstrap 5** | Frontend framework |
+| **ApexCharts** | Data visualization |
+| **Blade** | Template engine |
+| **Composer** | PHP package manager |
+
+---
+
+## 🎯 Roadmap
+
+- [ ] Mobile app (iOS/Android)
+- [ ] Advanced analytics & reporting
+- [ ] Integration with CMDB
+- [ ] Barcode/QR code scanning
+- [ ] Automated depreciation calculations
+- [ ] Multi-language support
+- [ ] Dark mode theme
+
+---
+
+## 👥 Authors & Acknowledgments
+
+- **CADFEM Development Team** - Customization & maintenance
+- **Grokability** - Original Snipe-IT creators
+- **Laravel Community** - Framework & ecosystem
+
+---
+
+## 📞 Contact
+
+**CADFEM Asset Management Team**
+- Email: prashanth.d@cadfem.ai
+- Website: www.cadfem.ai
+- GitHub: https://github.com/PrasanthDudala03/cadfem-asset-management
+
+---
+
+## 📌 Latest Updates
+
+### v2026.1.0 - Dashboard Modernization
+- ✨ New modern equipment dashboard with ApexCharts
+- 🎨 Professional UI redesign with gradient backgrounds
+- 📊 Interactive KPI cards with real-time data
+- 🚀 Asset import with 85 sample deployments
+- 🏢 Full CADFEM branding throughout
+
+---
+
+**Made with ❤️ by CADFEM**
+
+*Last Updated: September 15, 2026*
