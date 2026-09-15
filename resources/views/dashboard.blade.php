@@ -9,16 +9,15 @@
 {{-- Page content --}}
 @section('content')
 
+<div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; padding: 30px 0; margin: -15px -15px 0 -15px;">
+
 @if ($snipeSettings->dashboard_message!='')
-<div class="row">
+<div class="row px-4">
     <div class="col-md-12">
-        <div class="box box-default">
-            <!-- /.box-header -->
-            <div class="box-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        {!!  Helper::parseEscapedMarkedown($snipeSettings->dashboard_message)  !!}
-                    </div>
+        <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 30px;">
+            <div class="row">
+                <div class="col-md-12">
+                    {!!  Helper::parseEscapedMarkedown($snipeSettings->dashboard_message)  !!}
                 </div>
             </div>
         </div>
@@ -26,181 +25,109 @@
 </div>
 @endif
 
-<div class="row">
+<div class="row px-4">
 
-    <!-- panel -->
-    <div class="col-lg-2 col-xs-6">
-        <a href="{{ route('hardware.index') }}">
-            <!-- small hardware box -->
-            <div class="dashboard small-box bg-teal">
-                <div class="inner">
-                    <h3>{{ number_format(\App\Models\Asset::AssetsForShow()->count()) }}</h3>
-                    <p>{{ trans('general.assets') }}</p>
-                </div>
-                <div class="icon" aria-hidden="true">
-                    <x-icon type="assets" />
-                </div>
-                <span class="small-box-footer">
-                    {{ trans('general.view_all') }}
-                    <x-icon type="arrow-circle-right" />
-                </span>
+    <!-- KPI Cards -->
+    <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
+        <a href="{{ route('hardware.index') }}" style="text-decoration: none; color: inherit;">
+            <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 5px solid #003366; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <p style="margin: 0; color: #999; font-size: 12px; font-weight: 600; text-transform: uppercase;">{{ trans('general.assets') }}</p>
+                <h2 style="margin: 12px 0 0 0; font-size: 32px; font-weight: 800; color: #003366;">{{ number_format(\App\Models\Asset::AssetsForShow()->count()) }}</h2>
             </div>
         </a>
-    </div><!-- ./col -->
+    </div>
 
-    <div class="col-lg-2 col-xs-6">
-        <a href="{{ route('licenses.index') }}" aria-hidden="true">
-            <!-- small license box -->
-            <div class="dashboard small-box bg-maroon">
-                <div class="inner">
-                    <h3>{{ number_format($counts['license']) }}</h3>
-                    <p>{{ trans('general.licenses') }}</p>
-                </div>
-                <div class="icon" aria-hidden="true">
-                    <x-icon type="licenses" />
-                </div>
-                <span class="small-box-footer">
-                    {{ trans('general.view_all') }}
-                    <x-icon type="arrow-circle-right" />
-                </span>
+    <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
+        <a href="{{ route('licenses.index') }}" style="text-decoration: none; color: inherit;">
+            <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 5px solid #28a745; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <p style="margin: 0; color: #999; font-size: 12px; font-weight: 600; text-transform: uppercase;">{{ trans('general.licenses') }}</p>
+                <h2 style="margin: 12px 0 0 0; font-size: 32px; font-weight: 800; color: #28a745;">{{ number_format($counts['license']) }}</h2>
             </div>
         </a>
-    </div><!-- ./col -->
+    </div>
 
-
-    <div class="col-lg-2 col-xs-6">
-    <!-- small accessories box -->
-        <a href="{{ route('accessories.index') }}">
-            <div class="dashboard small-box bg-orange">
-                <div class="inner">
-                    <h3> {{ number_format($counts['accessory']) }}</h3>
-                    <p>{{ trans('general.accessories') }}</p>
-                </div>
-                <div class="icon" aria-hidden="true">
-                    <x-icon type="accessories" />
-                </div>
-                <span class="small-box-footer">
-                    {{ trans('general.view_all') }}
-                <x-icon type="arrow-circle-right" />
-                </span>
+    <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
+        <a href="{{ route('accessories.index') }}" style="text-decoration: none; color: inherit;">
+            <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 5px solid #ffc107; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <p style="margin: 0; color: #999; font-size: 12px; font-weight: 600; text-transform: uppercase;">{{ trans('general.accessories') }}</p>
+                <h2 style="margin: 12px 0 0 0; font-size: 32px; font-weight: 800; color: #ffc107;">{{ number_format($counts['accessory']) }}</h2>
             </div>
         </a>
-    </div><!-- ./col -->
+    </div>
 
-    <div class="col-lg-2 col-xs-6">
-    <!-- small consumables box -->
-        <a href="{{ route('consumables.index') }}">
-            <div class="dashboard small-box bg-purple">
-                <div class="inner">
-                    <h3> {{ number_format($counts['consumable']) }}</h3>
-                    <p>{{ trans('general.consumables') }}</p>
-                </div>
-                <div class="icon" aria-hidden="true">
-                    <x-icon type="consumables" />
-                </div>
-                <span class="small-box-footer">
-                    {{ trans('general.view_all') }}
-                    <x-icon type="arrow-circle-right" />
-                </span>
+    <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
+        <a href="{{ route('consumables.index') }}" style="text-decoration: none; color: inherit;">
+            <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 5px solid #ff6c6c; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <p style="margin: 0; color: #999; font-size: 12px; font-weight: 600; text-transform: uppercase;">{{ trans('general.consumables') }}</p>
+                <h2 style="margin: 12px 0 0 0; font-size: 32px; font-weight: 800; color: #ff6c6c;">{{ number_format($counts['consumable']) }}</h2>
             </div>
         </a>
-    </div><!-- ./col -->
+    </div>
 
-    <div class="col-lg-2 col-xs-6">
-        <!-- small components box -->
-        <a href="{{ route('components.index') }}">
-            <div class="dashboard small-box bg-yellow">
-                <div class="inner">
-                    <h3>{{ number_format($counts['component']) }}</h3>
-                    <p>{{ trans('general.components') }}</p>
-                </div>
-                <div class="icon" aria-hidden="true">
-                    <x-icon type="components" />
-                </div>
-                <span class="small-box-footer">
-                    {{ trans('general.view_all') }}
-                    <x-icon type="arrow-circle-right" />
-                </span>
+    <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
+        <a href="{{ route('components.index') }}" style="text-decoration: none; color: inherit;">
+            <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 5px solid #6c5ce7; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <p style="margin: 0; color: #999; font-size: 12px; font-weight: 600; text-transform: uppercase;">{{ trans('general.components') }}</p>
+                <h2 style="margin: 12px 0 0 0; font-size: 32px; font-weight: 800; color: #6c5ce7;">{{ number_format($counts['component']) }}</h2>
             </div>
         </a>
-    </div><!-- ./col -->
+    </div>
 
-    <div class="col-lg-2 col-xs-6">
-        <!-- small users box -->
-        <a href="{{ route('users.index') }}">
-            <div class="dashboard small-box bg-light-blue">
-                <div class="inner">
-                    <h3>{{ number_format($counts['user']) }}</h3>
-                    <p>{{ trans('general.people') }}</p>
-                </div>
-                <div class="icon" aria-hidden="true">
-                    <x-icon type="users" />
-                </div>
-                <span class="small-box-footer">
-                    {{ trans('general.view_all') }}
-                    <x-icon type="arrow-circle-right" />
-                </span>
+    <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
+        <a href="{{ route('users.index') }}" style="text-decoration: none; color: inherit;">
+            <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 5px solid #00bcd4; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <p style="margin: 0; color: #999; font-size: 12px; font-weight: 600; text-transform: uppercase;">{{ trans('general.people') }}</p>
+                <h2 style="margin: 12px 0 0 0; font-size: 32px; font-weight: 800; color: #00bcd4;">{{ number_format($counts['user']) }}</h2>
             </div>
         </a>
-    </div><!-- ./col -->
+    </div>
 </div>
 
 @if ($counts['grand_total'] == 0)
 
-    <div class="row">
+    <div class="row px-4 mb-4">
 
         <div class="col-md-12">
-            <div class="box box-default">
-                <div class="box-header with-border">
-                    <h2 class="box-title">{{ trans('general.dashboard_info') }}</h2>
+            <div style="background: white; border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center;">
+                <div style="margin-bottom: 24px;">
+                    <div style="font-size: 64px; margin-bottom: 16px;">📦</div>
+                    <h2 style="color: #003366; font-weight: 700; margin: 0;">{{ trans('general.dashboard_info') }}</h2>
                 </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-                    <div class="row">
-                        <div class="col-md-12">
+                <p style="color: #666; font-size: 16px; margin-bottom: 32px;"><strong>{{ trans('general.dashboard_empty') }}</strong></p>
+                <div style="background: #f0f0f0; height: 4px; border-radius: 2px; margin: 24px 0;">
+                    <div style="background: linear-gradient(90deg, #ffc107 0%, #ffc107 60%, #f0f0f0 60%); height: 100%; border-radius: 2px;"></div>
+                </div>
 
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                    <span class="sr-only">{{ trans('general.60_percent_warning') }}</span>
-                                </div>
-                            </div>
-
-
-                            <p><strong>{{ trans('general.dashboard_empty') }}</strong></p>
-
-                        </div>
+                <div class="row" style="margin-top: 32px;">
+                    <div class="col-md-2">
+                        @can('create', \App\Models\Asset::class)
+                        <a style="display: inline-block; width: 100%; padding: 10px; background: #003366; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; margin-bottom: 12px;" href="{{ route('hardware.create') }}">{{ trans('general.new_asset') }}</a>
+                        @endcan
                     </div>
-                    <div class="row">
-                        <div class="col-md-2">
-                            @can('create', \App\Models\Asset::class)
-                            <a class="btn bg-teal" style="width: 100%" href="{{ route('hardware.create') }}">{{ trans('general.new_asset') }}</a>
-                            @endcan
-                        </div>
-                        <div class="col-md-2">
-                            @can('create', \App\Models\License::class)
-                                <a class="btn bg-maroon" style="width: 100%" href="{{ route('licenses.create') }}">{{ trans('general.new_license') }}</a>
-                            @endcan
-                        </div>
-                        <div class="col-md-2">
-                            @can('create', \App\Models\Accessory::class)
-                                <a class="btn bg-orange" style="width: 100%" href="{{ route('accessories.create') }}">{{ trans('general.new_accessory') }}</a>
-                            @endcan
-                        </div>
-                        <div class="col-md-2">
-                            @can('create', \App\Models\Consumable::class)
-                                <a class="btn bg-purple" style="width: 100%" href="{{ route('consumables.create') }}">{{ trans('general.new_consumable') }}</a>
-                            @endcan
-                        </div>
-                        <div class="col-md-2">
-                            @can('create', \App\Models\Component::class)
-                                <a class="btn bg-yellow" style="width: 100%" href="{{ route('components.create') }}">{{ trans('general.new_component') }}</a>
-                            @endcan
-                        </div>
-                        <div class="col-md-2">
-                            @can('create', \App\Models\User::class)
-                                <a class="btn bg-light-blue" style="width: 100%" href="{{ route('users.create') }}">{{ trans('general.new_user') }}</a>
-                            @endcan
-                        </div>
+                    <div class="col-md-2">
+                        @can('create', \App\Models\License::class)
+                            <a style="display: inline-block; width: 100%; padding: 10px; background: #28a745; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; margin-bottom: 12px;" href="{{ route('licenses.create') }}">{{ trans('general.new_license') }}</a>
+                        @endcan
+                    </div>
+                    <div class="col-md-2">
+                        @can('create', \App\Models\Accessory::class)
+                            <a style="display: inline-block; width: 100%; padding: 10px; background: #ffc107; color: #333; border-radius: 8px; text-decoration: none; font-weight: 600; margin-bottom: 12px;" href="{{ route('accessories.create') }}">{{ trans('general.new_accessory') }}</a>
+                        @endcan
+                    </div>
+                    <div class="col-md-2">
+                        @can('create', \App\Models\Consumable::class)
+                            <a style="display: inline-block; width: 100%; padding: 10px; background: #ff6c6c; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; margin-bottom: 12px;" href="{{ route('consumables.create') }}">{{ trans('general.new_consumable') }}</a>
+                        @endcan
+                    </div>
+                    <div class="col-md-2">
+                        @can('create', \App\Models\Component::class)
+                            <a style="display: inline-block; width: 100%; padding: 10px; background: #6c5ce7; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; margin-bottom: 12px;" href="{{ route('components.create') }}">{{ trans('general.new_component') }}</a>
+                        @endcan
+                    </div>
+                    <div class="col-md-2">
+                        @can('create', \App\Models\User::class)
+                            <a style="display: inline-block; width: 100%; padding: 10px; background: #00bcd4; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; margin-bottom: 12px;" href="{{ route('users.create') }}">{{ trans('general.new_user') }}</a>
+                        @endcan
                     </div>
                 </div>
             </div>
@@ -210,19 +137,11 @@
 @else
 
     <!-- recent activity + today calendar -->
-    <div class="row dashboard-row-eq dashboard-row-compact">
+    <div class="row dashboard-row-eq dashboard-row-compact px-4 mb-4">
   <div class="col-md-8">
-    <div class="box box-default">
-      <div class="box-header with-border">
-        <h2 class="box-title">{{ trans('general.recent_activity') }}</h2>
-        <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse" aria-hidden="true">
-                <x-icon type="minus" />
-                <span class="sr-only">{{ trans('general.collapse') }}</span>
-            </button>
-        </div>
-      </div><!-- /.box-header -->
-      <div class="box-body">
+    <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+      <h2 style="margin-top: 0; color: #333; font-weight: 700; margin-bottom: 20px;">{{ trans('general.recent_activity') }}</h2>
+      <div>
         <div class="row">
           <div class="col-md-12">
 
@@ -250,13 +169,13 @@
                     </tr>
                     </thead>
                 </table>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- ./box-body -->
-        <div class="box-footer text-center">
-            <a href="{{ route('reports.activity') }}" class="btn btn-theme btn-sm" style="width: 100%">{{ trans('general.viewall') }}</a>
+          </div>
         </div>
-    </div><!-- /.box -->
+      </div>
+        <div style="text-align: center; padding-top: 16px; border-top: 1px solid #f0f0f0;">
+            <a href="{{ route('reports.activity') }}" style="display: inline-block; padding: 8px 16px; background: #003366; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 12px;">{{ trans('general.viewall') }}</a>
+        </div>
+    </div>
   </div>
 
         {{-- Today widget: agenda-style list of everything happening
@@ -266,27 +185,13 @@
              for a single day). --}}
         <div class="col-md-4">
             @can('view', \App\Models\Asset::class)
-                <div class="box box-default">
-                    <div class="box-header with-border">
-                        <h2 class="box-title">
-                            <a href="{{ route('calendar.index') }}">{{ trans('general.calendar_upcoming') }}</a>
-                        </h2>
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse" aria-hidden="true">
-                                <x-icon type="minus"/>
-                                <span class="sr-only">{{ trans('general.collapse') }}</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="box-body">
-                        <div id="dashboard-today-calendar"></div>
-                    </div>
-                    {{-- Matches the "View all" btn-theme footers on the
-                         sibling dashboard panels. Shown only when the
-                         widget's onFetchMeta reports the API hit its
-                         row cap. --}}
-                    <div id="dashboard-today-more" class="box-footer text-center" style="display:none;">
-                        <a href="{{ route('calendar.index') }}" class="btn btn-theme btn-sm" style="width: 100%" id="dashboard-today-more-link"></a>
+                <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                    <h2 style="margin-top: 0; color: #333; font-weight: 700; margin-bottom: 20px;">
+                        <a href="{{ route('calendar.index') }}" style="color: #003366; text-decoration: none;">{{ trans('general.calendar_upcoming') }}</a>
+                    </h2>
+                    <div id="dashboard-today-calendar"></div>
+                    <div id="dashboard-today-more" style="display:none; margin-top: 16px; text-align: center; padding-top: 16px; border-top: 1px solid #f0f0f0;">
+                        <a href="{{ route('calendar.index') }}" style="display: inline-block; padding: 8px 16px; background: #003366; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 12px;" id="dashboard-today-more-link"></a>
                     </div>
                 </div>
             @endcan
@@ -300,41 +205,22 @@
          caps the box-body heights on this row so the pie/list/table
          trio doesn't dwarf the rest of the dashboard when Needs
          Attention or Low Stock grow long. --}}
-    <div class="row dashboard-row-eq dashboard-row-compact">
+    <div class="row dashboard-row-eq dashboard-row-compact px-4 mb-4">
         <div class="col-md-4">
-        <div class="box box-default">
-            <div class="box-header with-border">
-                <h2 class="box-title">
-                    {{ (\App\Models\Setting::getSettings()->dash_chart_type == 'name') ? trans('general.assets_by_status') : trans('general.assets_by_status_type') }}
-                </h2>
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse" aria-hidden="true">
-                        <x-icon type="minus" />
-                        <span class="sr-only">{{ trans('general.collapse') }}</span>
-                    </button>
-                </div>
-            </div>
-            {{-- Fixed-height wrapper with position:relative is the
-                 stable Chart.js responsive pattern: canvas inside has
-                 no dimensions of its own and the responsive resize
-                 fills the wrapper. Height:100% here caused a resize
-                 loop against the flex-stretched box-body (canvas
-                 grows → box grows → canvas resizes). Pinning to 300px
-                 gives the pie enough room without dominating the row
-                 and stops the growth loop. --}}
-            <div class="box-body dashboard-chart-body">
-                <div class="chart-responsive" style="position: relative; height: 300px;">
-                    <canvas id="statusPieChart"></canvas>
-                </div>
+        <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <h2 style="margin-top: 0; color: #333; font-weight: 700; margin-bottom: 20px;">
+                {{ (\App\Models\Setting::getSettings()->dash_chart_type == 'name') ? trans('general.assets_by_status') : trans('general.assets_by_status_type') }}
+            </h2>
+            <div style="position: relative; height: 300px;">
+                <canvas id="statusPieChart"></canvas>
             </div>
         </div>
         </div>
 
         <div class="col-md-4">
-            <div class="box box-default">
-                <div class="box-header with-border">
-                    <h2 class="box-title">
-                        {{ trans('general.dashboard_low_stock') }}
+            <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <h2 style="margin-top: 0; color: #333; font-weight: 700; margin-bottom: 20px;">
+                    {{ trans('general.dashboard_low_stock') }}
                         {{-- Info icon: explains the formula the alert
                              uses (remaining < min + alert_threshold)
                              so the widget doesn't look arbitrary to
@@ -344,20 +230,11 @@
                              but can't reach the alert-threshold setting. --}}
                         <span data-tooltip="true"
                               title="{{ trans('general.dashboard_low_stock_help', ['threshold' => (int) $snipeSettings->alert_threshold]) }}"
-                              class="text-muted"
-                              style="cursor: help;">
-                            <x-icon type="more-info" class="fa-fw"/>
-                            <span class="sr-only">{{ trans('general.dashboard_low_stock_help', ['threshold' => (int) $snipeSettings->alert_threshold]) }}</span>
+                              style="cursor: help; margin-left: 8px; color: #999;">
+                            ℹ️
                         </span>
                     </h2>
-                    <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse" aria-hidden="true">
-                            <x-icon type="minus"/>
-                            <span class="sr-only">{{ trans('general.collapse') }}</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="box-body">
+                <div>
                     {{-- Bs-table backed by /api/v1/low-stock which delegates
                          to Helper::checkLowInventory so this widget and the
                          top-nav alert bell can't drift. polymorphicItemFormatter
@@ -398,32 +275,25 @@
         </div>
 
         <div class="col-md-4">
-            {{-- Lazy Livewire component so the eight count queries
-                 that back this widget don't sit on the dashboard's
-                 critical render path. Rendered as a placeholder on
-                 first paint; Livewire fires a follow-up XHR to hydrate
-                 the real counts. Same pattern the top-nav AlertMenu
-                 uses for its low-inventory + deprecation queries. --}}
-            <livewire:needs-attention/>
+            <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                {{-- Lazy Livewire component so the eight count queries
+                     that back this widget don't sit on the dashboard's
+                     critical render path. Rendered as a placeholder on
+                     first paint; Livewire fires a follow-up XHR to hydrate
+                     the real counts. Same pattern the top-nav AlertMenu
+                     uses for its low-inventory + deprecation queries. --}}
+                <livewire:needs-attention/>
+            </div>
         </div>
 </div> <!--/row-->
-<div class="row">
+<div class="row px-4 mb-4">
     <div class="col-md-6">
 
 		@if ((($snipeSettings->scope_locations_fmcs!='1') && ($snipeSettings->full_multiple_companies_support=='1')))
-			 <!-- Companies -->	
-			<div class="box box-default">
-				<div class="box-header with-border">
-					<h2 class="box-title">{{ trans('general.companies') }}</h2>
-					<div class="box-tools pull-right">
-						<button type="button" class="btn btn-box-tool" data-widget="collapse">
-                            <x-icon type="minus" />
-							<span class="sr-only">{{ trans('general.collapse') }}</span>
-						</button>
-					</div>
-				</div>
-				<!-- /.box-header -->
-				<div class="box-body">
+			 <!-- Companies -->
+			<div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+				<h2 style="margin-top: 0; color: #333; font-weight: 700; margin-bottom: 20px;">{{ trans('general.companies') }}</h2>
+				<div>
 					<div class="row">
 						<div class="col-md-12">
 							<table
@@ -470,28 +340,18 @@
 								</thead>
 							</table>
 						</div> <!-- /.col -->
-						<div class="text-center col-md-12" style="padding-top: 10px;">
-							<a href="{{ route('companies.index') }}" class="btn btn-theme btn-sm" style="width: 100%">{{ trans('general.viewall') }}</a>
+						<div style="text-align: center; padding-top: 16px; border-top: 1px solid #f0f0f0;">
+							<a href="{{ route('companies.index') }}" style="display: inline-block; padding: 8px 16px; background: #003366; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 12px;">{{ trans('general.viewall') }}</a>
 						</div>
 					</div> <!-- /.row -->
 
-				</div><!-- /.box-body -->
-			</div> <!-- /.box -->
-		
+				</div>
+
 		@else
 			 <!-- Locations -->
-			 <div class="box box-default">
-				<div class="box-header with-border">
-					<h2 class="box-title">{{ trans('general.locations') }}</h2>
-					<div class="box-tools pull-right">
-						<button type="button" class="btn btn-box-tool" data-widget="collapse">
-                            <x-icon type="minus" />
-							<span class="sr-only">{{ trans('general.collapse') }}</span>
-						</button>
-					</div>
-				</div>
-				<!-- /.box-header -->
-				<div class="box-body">
+			 <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+				<h2 style="margin-top: 0; color: #333; font-weight: 700; margin-bottom: 20px;">{{ trans('general.locations') }}</h2>
+				<div>
 					<div class="row">
 						<div class="col-md-12">
 
@@ -529,32 +389,22 @@
 								</thead>
 							</table>
 						</div> <!-- /.col -->
-						<div class="text-center col-md-12" style="padding-top: 10px;">
-							<a href="{{ route('locations.index') }}" class="btn btn-theme btn-sm" style="width: 100%">{{ trans('general.viewall') }}</a>
+						<div style="text-align: center; padding-top: 16px; border-top: 1px solid #f0f0f0;">
+							<a href="{{ route('locations.index') }}" style="display: inline-block; padding: 8px 16px; background: #003366; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 12px;">{{ trans('general.viewall') }}</a>
 						</div>
 					</div> <!-- /.row -->
 
-				</div><!-- /.box-body -->
-			</div> <!-- /.box -->
+				</div>
 
 		@endif
-			
+
     </div>
     <div class="col-md-6">
 
         <!-- Categories -->
-        <div class="box box-default">
-            <div class="box-header with-border">
-                <h2 class="box-title">{{ trans('general.categories') }}</h2>
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                        <x-icon type="minus" />
-                        <span class="sr-only">{{ trans('general.collapse') }}</span>
-                    </button>
-                </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
+        <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <h2 style="margin-top: 0; color: #333; font-weight: 700; margin-bottom: 20px;">{{ trans('general.categories') }}</h2>
+            <div>
                 <div class="row">
                     <div class="col-md-12">
 
@@ -601,16 +451,16 @@
                         </table>
 
                     </div> <!-- /.col -->
-                    <div class="text-center col-md-12" style="padding-top: 10px;">
-                        <a href="{{ route('categories.index') }}" class="btn btn-theme btn-sm" style="width: 100%">{{ trans('general.viewall') }}</a>
+                    <div style="text-align: center; padding-top: 16px; border-top: 1px solid #f0f0f0;">
+                        <a href="{{ route('categories.index') }}" style="display: inline-block; padding: 8px 16px; background: #003366; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 12px;">{{ trans('general.viewall') }}</a>
                     </div>
                 </div> <!-- /.row -->
 
-            </div><!-- /.box-body -->
-        </div> <!-- /.box -->
+            </div>
+        </div>
     </div>
 
-
+</div>
 @endif
 
     {{-- Adjust-quantity modal wiring for the low-stock widget's inline
@@ -623,6 +473,8 @@
          || Gate::allows('update', \App\Models\Component::class))
         <x-modals.adjust-quantity/>
     @endif
+
+</div>
 
 @stop
 

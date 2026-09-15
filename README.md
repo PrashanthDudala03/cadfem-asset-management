@@ -1,11 +1,17 @@
 ![snipe-it-by-grok](https://github.com/grokability/snipe-it/assets/197404/b515673b-c7c8-4d9a-80f5-9fa58829a602)
 
+> **CADFEM Asset Management** - This is a customized version of Snipe-IT, rebranded and tailored for CADFEM's asset management needs.
+
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/snipe-it/localized.svg)](https://crowdin.com/project/snipe-it) [![Docker Pulls](https://img.shields.io/docker/pulls/snipe/snipe-it.svg)](https://hub.docker.com/r/snipe/snipe-it/)  [![Tests in MySQL](https://github.com/grokability/snipe-it/actions/workflows/tests-mysql.yml/badge.svg)](https://github.com/grokability/snipe-it/actions/workflows/tests-mysql.yml)
 [![All Contributors](https://img.shields.io/badge/all_contributors-331-orange.svg?style=flat-square)](#contributing) [![Discord](https://badgen.net/badge/icon/discord?icon=discord&label)](https://discord.gg/yZFtShAcKk)
 
-## Snipe-IT - Open Source Asset Management System
+## CADFEM Asset Management - Open Source Asset Management System
 
-This is a FOSS project for asset management in IT Operations. Knowing who has which laptop, when it was purchased in order to depreciate it correctly, handling software licenses, etc.
+CADFEM Asset Management is a customized version of Snipe-IT, an open-source asset management system for IT Operations. Track assets, manage depreciation, handle software licenses, and more.
+
+**Based on:** [Snipe-IT](https://github.com/grokability/snipe-it) - Open Source Asset Management System
+
+This is a FOSS project that can track IT equipment and manage software licenses. Know who has which equipment, when it was purchased for proper depreciation, handle software licensing, etc.
 
 It is built on [Laravel 12](http://laravel.com).
 

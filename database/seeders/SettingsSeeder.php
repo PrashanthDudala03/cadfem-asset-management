@@ -15,11 +15,11 @@ class SettingsSeeder extends Seeder
         Setting::truncate();
         $settings = new Setting;
         $settings->per_page = 20;
-        $settings->site_name = 'Snipe-IT Demo';
+        $settings->site_name = 'CADFEM Asset Management';
         $settings->auto_increment_assets = 1;
-        $settings->logo = 'snipe-logo.png';
-        $settings->alert_email = 'service@snipe-it.io';
-        $settings->header_color = null;
+        $settings->logo = 'cadfem-logo.svg';
+        $settings->alert_email = 'prashanth.d@cadfem.ai';
+        $settings->header_color = '#003366';
         $settings->label2_2d_type = 'QRCODE';
         $settings->default_currency = 'USD';
         $settings->brand = 2;

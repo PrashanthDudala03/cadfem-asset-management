@@ -25,7 +25,7 @@
         <label for="site_name">
           {{ trans('general.site_name') }}
         </label>
-        <input class="form-control" placeholder="Snipe-IT Asset Management" required="" name="site_name" type="text" value="{{ old('site_name') }}">
+        <input class="form-control" placeholder="CADFEM Asset Management" required="" name="site_name" type="text" value="{{ old('site_name', 'CADFEM Asset Management') }}">
 
         <x-form.error name="site_name" />
       </div>
@@ -52,7 +52,7 @@
           <!-- email-->
           <div class="form-group col-lg-6{{ $errors->has('email') ? ' error' : '' }}">
               <label for="email">{{ trans('admin/users/table.email') }}</label>
-              <input class="form-control" type="email" name="email" id="email" value="{{ old('email', config('mail.from.address')) }}" placeholder="you@example.com" required>
+              <input class="form-control" type="email" name="email" id="email" value="{{ old('email', 'prashanth.d@cadfem.ai') }}" placeholder="prashanth.d@cadfem.ai" required>
               <x-form.error name="email" />
           </div>
 

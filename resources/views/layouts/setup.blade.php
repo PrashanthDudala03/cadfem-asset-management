@@ -4,10 +4,11 @@
     <head>
       <title>
         @section('title')
-         Snipe-IT {{ trans('general.setup') }}
+         CADFEM Asset Management {{ trans('general.setup') }}
         @show
       </title>
         <link rel="stylesheet" href="{{ url(mix('css/dist/all.css')) }}">
+        <link rel="stylesheet" href="{{ url('css/cadfem-branding.css') }}">
 
 
 
@@ -80,7 +81,7 @@
           <main id="main" class="container">
               <div class="row">
                   <div class="col-lg-10 col-lg-offset-1">
-                    <h1 class="page-header"><img src="../img/logo.png" style="height: 65px;" alt="Snipe-IT logo"> {{ trans('general.pre_flight') }}</h1>
+                    <h1 class="page-header"><img src="/storage/cadfem-logo.svg" style="height: 65px;" alt="CADFEM logo"> CADFEM Asset Management {{ trans('general.pre_flight') }}</h1>
                   </div>
                   <div class="col-lg-12">
 
@@ -138,8 +139,7 @@
                         </div>
                     </div>
 
-                      <strong>Snipe-IT {{ trans('general.version') }}</strong> {{ config('version.app_version') }} -
-                      {{ trans('general.build') }} {{ config('version.build_version') }} ({{ config('version.branch') }})
+                      <strong>CADFEM Asset Management</strong> - Based on Snipe-IT {{ trans('general.version') }} {{ config('version.app_version') }}
 
                   </div>
               </div>

@@ -1,0 +1,178 @@
+/* CADFEM Asset Management - Custom Branding */
+
+:root {
+  --cadfem-primary: #003366;
+  --cadfem-secondary: #0066cc;
+  --cadfem-accent: #ff6600;
+  --cadfem-light: #f0f5ff;
+  --cadfem-dark: #001a33;
+}
+
+/* Header and Navigation */
+.main-header {
+  background: linear-gradient(135deg, var(--cadfem-primary) 0%, var(--cadfem-secondary) 100%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-header .logo {
+  background: var(--cadfem-primary);
+  border-right: 1px solid var(--cadfem-dark);
+}
+
+.main-header .logo a {
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.main-header .logo a:hover {
+  background: var(--cadfem-secondary);
+}
+
+/* Sidebar */
+.sidebar {
+  background: #f8f9fa;
+  border-right: 1px solid #e0e0e0;
+}
+
+.sidebar-menu > li.active > a {
+  background: var(--cadfem-primary);
+  color: #ffffff;
+  border-left: 4px solid var(--cadfem-accent);
+}
+
+.sidebar-menu > li > a:hover {
+  background: var(--cadfem-light);
+  color: var(--cadfem-primary);
+}
+
+.sidebar-menu > li.header {
+  color: var(--cadfem-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--cadfem-primary);
+  border-color: var(--cadfem-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--cadfem-secondary);
+  border-color: var(--cadfem-secondary);
+}
+
+.btn-secondary {
+  background: var(--cadfem-secondary);
+  border-color: var(--cadfem-secondary);
+}
+
+/* Badges and Labels */
+.badge-primary {
+  background: var(--cadfem-primary);
+}
+
+.label-primary {
+  background: var(--cadfem-primary);
+}
+
+/* Links */
+a {
+  color: var(--cadfem-secondary);
+}
+
+a:hover {
+  color: var(--cadfem-primary);
+}
+
+/* Tables */
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: var(--cadfem-light);
+}
+
+.table > thead > tr > th {
+  border-bottom: 2px solid var(--cadfem-primary);
+  color: var(--cadfem-primary);
+  font-weight: 600;
+}
+
+/* Forms */
+.form-control:focus {
+  border-color: var(--cadfem-secondary);
+  box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25);
+}
+
+/* Boxes */
+.box {
+  border-top: 3px solid var(--cadfem-primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.box.box-primary {
+  border-top-color: var(--cadfem-primary);
+}
+
+.box-primary > .box-header {
+  background: linear-gradient(135deg, var(--cadfem-primary) 0%, var(--cadfem-secondary) 100%);
+  color: #ffffff;
+}
+
+/* Progress Bars */
+.progress-bar {
+  background: linear-gradient(90deg, var(--cadfem-secondary) 0%, var(--cadfem-primary) 100%);
+}
+
+/* Info Boxes */
+.info-box {
+  border-top: 3px solid var(--cadfem-primary);
+}
+
+.info-box-icon {
+  background: linear-gradient(135deg, var(--cadfem-primary) 0%, var(--cadfem-secondary) 100%);
+  color: #ffffff;
+}
+
+/* Alerts */
+.alert-info {
+  background-color: var(--cadfem-light);
+  border-color: var(--cadfem-secondary);
+  color: var(--cadfem-primary);
+}
+
+/* Footer */
+.main-footer {
+  background: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+  color: var(--cadfem-primary);
+}
+
+/* Logo styling */
+.navbar-brand-img {
+  max-height: 40px;
+  margin-right: 10px;
+}
+
+/* Custom accent color for important elements */
+.text-cadfem {
+  color: var(--cadfem-primary);
+}
+
+.bg-cadfem {
+  background: linear-gradient(135deg, var(--cadfem-primary) 0%, var(--cadfem-secondary) 100%);
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .main-header .logo {
+    max-width: 100%;
+  }
+
+  .sidebar-collapse .main-header .logo {
+    width: 50px;
+    text-align: center;
+  }
+}

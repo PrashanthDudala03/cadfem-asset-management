@@ -985,3 +985,17 @@ Route::middleware(['auth'])->get(
 )->name('home')
     ->breadcrumbs(fn (Trail $trail) => $trail->push('Home', route('home'))
     );
+
+// CADFEM Equipment Dashboard
+Route::middleware(['auth'])->get(
+    '/equipment-dashboard',
+    [\App\Http\Controllers\EquipmentDashboardController::class, 'index']
+)->name('equipment-dashboard')
+    ->breadcrumbs(fn (Trail $trail) => $trail->push('Equipment Dashboard', route('equipment-dashboard'))
+    );
+
+Route::middleware(['auth'])->prefix('api/dashboard')->group(function () {
+    Route::get('/data', [\App\Http\Controllers\EquipmentDashboardController::class, 'getData']);
+    Route::get('/status-distribution', [\App\Http\Controllers\EquipmentDashboardController::class, 'getStatusDistribution']);
+    Route::get('/category-distribution', [\App\Http\Controllers\EquipmentDashboardController::class, 'getCategoryDistribution']);
+});

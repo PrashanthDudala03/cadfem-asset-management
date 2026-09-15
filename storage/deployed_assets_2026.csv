@@ -1,0 +1,86 @@
+"Asset Tag",Model,"Model No.",Category,Manufacturer,Serial,"Order Number",Location,"Checked Out",Type,Username,Department,Status,Notes,"Device Status","ASSET OWNER"
+FN-E16-02,"LENOVO E16G1",E16,Laptop,Lenovo,PF4JWAFZ,PCS/23-24/594,Hyderabad,"Rambabu Moraboina",user,rambabu,Finance,"Deployed (deployed)",,Assigned,IT-HOD
+EBU-T15-01,"LENOVO T15GG2",T15,Laptop,Lenovo,PF3RQRQJ,PCS/24-25/846,Bangalore,"Veena H",user,VeenaH,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+CFD-3680-04,"Dell T3680",3680,CPU,Dell,2DVTN24,PCS/25-26/085,Hyderabad,"Sidharth Ramesh Kamble",user,sidharth,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+EX-3680-03,"Dell T3680",3680,CPU,Dell,2XKSN24,PCS/25-26/085,Hyderabad,"Ratna Moses Dasari",user,moses,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+IT-HPZ2-02/Mon2,"HP Series 5 Pro 23.8","5 PRO",Monitor,HP,CN444234HX,PCS/25-26/085,Hyderabad,"Mohanakrishna Lanka",user,mohanakrishna,IT,"Deployed (deployed)",,"Not Assigned",IT-HOD
+IM-HPZ2-03/MONITOR1,"HP Series 5 Pro 23.8","5 PRO",Monitor,HP,CN444234NZ,PCS/25-26/085,Hyderabad,"Aravind Reddy Neerati",user,aravindn,"Services and Solutions","Deployed (deployed)",,"Not Assigned",IT-HOD
+CH-3660-08,"DELL T3660",3660,CPU,Dell,5TL4M24,PCS/24-25/065,Hyderabad,"Mohammed Numan",user,numan,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+CH-3660-09,"DELL T3660",3660,CPU,Dell,1VL4M24,PCS/24-25/065,Hyderabad,"Pavan Kumar Gubba",user,pavang,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+CFD-3660-02,"DELL T3660",3660,CPU,Dell,7D80NZ3,PCS/24-25/127,Hyderabad,"Pavan Kumar Konchada",user,pavan,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+EX-3660-03,"DELL T3660",3660,CPU,Dell,7YN0NZ3,PCS/24-25/127,Hyderabad,"Shashank Chawan",user,shashank,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+CTT-3660-03,"DELL T3660",3660,CPU,Dell,2KY2M24,PCS/24-25/127,Hyderabad,"Naveen Kumar Begari",user,naveen,IT,"Deployed (deployed)",,Assigned,IT-HOD
+CFD-3660-03,"DELL T3660",3660,CPU,Dell,FWR3M24,PCS/24-25/127,Hyderabad,"Priyanka Baranwal",user,priyanka,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+OA-E16-02,"LENOVO E16G1",E16,Laptop,Lenovo,PF4JW0WX,PCS/24-25/098,Hyderabad,"Bheemi Reddy B.R",user,bheemi,Finance,"Deployed (deployed)",,Assigned,IT-HOD
+OA-E16-03,"LENOVO E16G1",E16,Laptop,Lenovo,PF4JVTX9,PCS/24-25/098,Hyderabad,"Nidhi Jaiswal",user,nidhi,Finance,"Deployed (deployed)",,Assigned,IT-HOD
+FN-E16-03,"LENOVO E16G1",E16,Laptop,Lenovo,PF4JTFRB,PCS/24-25/098,Hyderabad,"Shiva Priya Palla",user,Shivapriya,Finance,"Deployed (deployed)",,Assigned,IT-HOD
+IM-3660-07,"DELL PRECISION T3660 I7- 13700/8GB/512GB/UBUNTU",3660,CPU,Dell,9TL4M24,PCS/24-25/164,Hyderabad,"Musheer Ahmed Mohammed",user,Musheer,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+CH-3660-12,"DELL PRECISION T3660 I7- 13700/8GB/512GB/UBUNTU",3660,CPU,Dell,1VL5M24,PCS/24-25/164,Bangalore,"Ashok Kumar Reddy C",user,ashok,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+CTT-3660-05,"DELL PRECISION T3660 I7- 13700/8GB/512GB/UBUNTU",3660,CPU,Dell,6VL4M24,PCS/24-25/164,Hyderabad,"Leela Manohar Juluri",user,leelamanohar,"Pre & Post Sales","Deployed (deployed)",,Assigned,IT-HOD
+LF-3660-02,"DELL PRECISION T3660 I7- 13700/8GB/512GB/UBUNTU",3660,CPU,Dell,JWR3M24,PCS/24-25/164,Hyderabad,"Adithya Battu",user,adithya,"Pre & Post Sales","Deployed (deployed)",,Assigned,IT-HOD
+CTT-E16-01/LAPTOP,"LENOVO E16G1",E16,Laptop,Lenovo,PF4R3VFG,PCS/24-25/164,Hyderabad,"Sujith Kudupudi",user,sujith,"Pre & Post Sales","Deployed (deployed)",,Assigned,IT-HOD
+CTT-P16-16,"LENOVO P16SG2",P16,Laptop,Lenovo,PF4W9MNY,PCS/24-25/164,Gurugram,"Vivek Prakash Yadav",user,vivekprakash,"Pre & Post Sales","Deployed (deployed)",,Assigned,IT-HOD
+CTT-P16-17,"LENOVO P16SG2",P16,Laptop,Lenovo,PF4W6971,PCS/24-25/164,Hyderabad,"Akankshya Panigrahi",user,akankshya,"Pre & Post Sales","Deployed (deployed)",,"Not Assigned",IT-HOD
+CH-3660-09/MONITOR1,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN44092WZF,PCS/24-25/164,Hyderabad,"Pavan Kumar Gubba",user,pavang,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+CH-3660-09/MONITOR2,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN44092X56,PCS/24-25/164,Hyderabad,"Pavan Kumar Gubba",user,pavang,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+MG-L14-08,"LENOVO L14",L14,Laptop,Lenovo,PW0791ED,PCS/24-25/227,Hyderabad,"Akshitha Panakanti",user,akshitha,Marketing,"Deployed (deployed)",,Assigned,IT-HOD
+SL-L14-46,"LENOVO L14",L14,Laptop,Lenovo,PW07913Z,PCS/24-25/227,Gurugram,"Pankaj Kumar",user,pankaj,Sales,"Deployed (deployed)",,Assigned,IT-HOD
+FN-E16-05,"LENOVO E16G1",E16,Laptop,Lenovo,PF4XQ47J,"PCS/24-25/227 & PCS/24-25/288",Hyderabad,"Pravalika Keshava",user,pravalika,Finance,"Deployed (deployed)",,Assigned,IT-HOD
+MG-E16-01,"LENOVO E16G1",E16,Laptop,Lenovo,PF4XQD8S,PCS/24-25/288,Hyderabad,"Prachi Mardia",user,prachi,Marketing,"Deployed (deployed)",,Assigned,IT-HOD
+FN-E16-06,"LENOVO E16G1",E16,Laptop,Lenovo,PF4R440X,PCS/24-25/288,Hyderabad,"srilakshmi Kamati",user,srilakshmi,Finance,"Deployed (deployed)",,Assigned,IT-HOD
+CFD-3680-01,"Dell T3680",3680,CPU,Dell,97FPM24,PCS/24-25/522,Hyderabad,"Sai Charan Javvadi",user,saicharan,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+IM-3680-01,"Dell T3680",3680,CPU,Dell,4MKQM24,PCS/24-25/522,Hyderabad,"Saddam Shamiyoddin Shaikh",user,saddam,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+EX-3680-01,"Dell T3680",3680,CPU,Dell,37FPM24,PCS/24-25/522,Hyderabad,"Sagar Machineni",user,msagar,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+CTT-3680-01,"Dell T3680",3680,CPU,Dell,5BCNM24,PCS/24-25/522,Hyderabad,"Esa Mohd",user,Esa,"Pre & Post Sales","Deployed (deployed)",,Assigned,IT-HOD
+LF-3680-01,"Dell T3680",3680,CPU,Dell,2MKQM24,Pcs/24-25/522,Bangalore,"Meera Murali",user,Meera,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+CFD-3680-02,"Dell T3680",3680,CPU,Dell,57FPM24,PCS/24-25/522,Hyderabad,"Sumit Parida",user,Sumit,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+CH-3680-01,"Dell T3680",3680,CPU,Dell,9MKQM24,PCS/24-25/522,Hyderabad,"Venkata Purushotham Sai Chejarla",user,purushotham,"Services and Solutions","Deployed (deployed)","IN CRASH ROOM",Assigned,IT-HOD
+EX-3680-01/MONITOR1,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN44210TNP,PCS/24-25/522,Hyderabad,"Sagar Machineni",user,msagar,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+EX-3680-01/MONITOR2,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN44210TP5,PCS/24-25/522,Hyderabad,"Sagar Machineni",user,msagar,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+LF-3680-01/MONITOR1,"HP MONITOR E243i",E243i,Monitor,HP,CNK21211H6,PISPL/Y2223/1222,Bangalore,"Meera Murali",user,Meera,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+CFD-3660-08/MONITOR2,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN44210RWB,PCS/24-25/522,Hyderabad,"Layakar Rugvedh Bolla",user,layakar,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+CFD-3650-06/MONITOR1,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN44210TP0,PCS/24-25/522,Hyderabad,"Venkata Kumar Teja Siginamsetty",user,venkatateja,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+HR-T14-02/MONITOR,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN44210TNK,PCS/24-25/522,Hyderabad,"Prashanth Goud Gouni",user,prashanthg,HR,"Deployed (deployed)",,Assigned,IT-HOD
+IM-3680-01/MONITOR,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN44210TNR,PCS/24-25/522,Hyderabad,"Saddam Shamiyoddin Shaikh",user,saddam,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+EX-3680-02,"Dell T3680",3680,CPU,Dell,4ZKSN24,PCS/25-26/085,Hyderabad,"Mahesh Prabhakar Mali",user,mahesh,"Services and Solutions","Deployed (deployed)",,"Not Assigned",IT-HOD
+IM-3680-02,"Dell T3680",3680,CPU,Dell,JH7RN24,PCS/25-26/085,Hyderabad,"Syam Kumar Manikonda",user,"Syam Kumar","Pre & Post Sales","Deployed (deployed)","SYAM TEAM","Not Assigned",IT-HOD
+HR-T14-01/M,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN433421R7(CN45300XSC),PCS/24-25/065,Hyderabad,"Pranaya Reddy Somannagari",user,pranaya,HR,"Deployed (deployed)",,Assigned,IT-HOD
+STK-Z8-01/MONITOR,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN433421KZ(CN44041ZZ2),PCS/24-25/065,Hyderabad,"Sai Ajay A",user,saiajay,"Pre & Post Sales","Deployed (deployed)",,Assigned,IT-HOD
+CFD-HPZ2-02/MONITOR,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN43340BC9,PCS/24-25/065,Hyderabad,"Pandu Ranga Harsha Nimmagadda",user,harsha,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+CFD-6134-01,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN43340BK0,PCS/24-25/065,Hyderabad,"Laxmi Kavya Aluri",user,kavya,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+IM-3660-02,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN43511K32,PCS/24-25/127,Hyderabad,"Basim Mohammed",user,basim,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+CFD-3660-03/MONITOR,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN43511K3C,PCS/24-25/127,Hyderabad,"Priyanka Baranwal",user,priyanka,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+CTT-P15-02,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN43511K3L,PCS/24-25/127,Hyderabad,"Bharat Chittepu",user,bharat,L&D,"Deployed (deployed)",,Assigned,IT-HOD
+CTT-3600-01,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN43511K4G,PCS/24-25/127,Hyderabad,"Srikanth Sampangi",user,srikanth,"Services and Solutions","Deployed (deployed)",,Assigned,IT-HOD
+LF-3660-02/MONITOR,"HP/MONITOR/E24 G5",E24,Monitor,HP,CN43511K4N,PCS/24-25/127,Hyderabad,"Adithya Battu",user,adithya,"Pre & Post Sales","Deployed (deployed)",,Assigned,IT-HOD
+IT-DL380-09,"HPE PRO LIANT DL380 GEN 11","DL380 GEN11",Server,HP,SGH421L3R1,ITISEG0224103004,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-DL380-05,"HPE PRO LIANT DL380 GEN 11","DL380 GEN11",Server,HP,SGH421L2PV,ITISEG0224103004,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-DL380-02,"HPE PRO LIANT DL380 GEN10","DL380 GEN10",Server,HP,SGH222WV59,NS/22-23/950,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-DL380-01,"HPE PRO LIANT DL380 GEN10","DL380 GEN10",Server,HP,SGH001SS6Q,,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-DL380-08,"HPE PRO LIANT DL380 GEN 11","DL380 GEN11",Server,HP,SGH421L2NZ,ITISEG0224103004,,,,,,"Deployed (deployable)",,,IT-HOD
+IT-DL380-07,"HPE PRO LIANT DL380 GEN 11","DL380 GEN11",Server,HP,SGH421L2MW,ITISEG0224103004,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-DL380-06,"HPE PRO LIANT DL380 GEN 11","DL380 GEN11",Server,HP,SGH421L3RJ,ITISEG0224103004,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-DL380-04,"HPE PRO LIANT DL380 GEN10 PLUS","DL380 GEN10 PLUS",Server,HP,SGH335FHLF,,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-CHA-01,"HPE BLADE SYSTEM C3000 ENCLOUSURE","C3000 ENCLOUSURE",Server,HP,SGH732T1D2,,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+0000000377,"HPE PRO LIANT DL380 GEN10","DL380 GEN10",Server,HP,SGH001SS78,,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-DL380-10,"HPE PRO LIANT DL380 GEN10 PLUS","DL380 GEN10 PLUS",Server,HP,SGH336FL3W,,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-460-01,"HPE BLADE SYSTEM C3000 ENCLOUSURE","C3000 ENCLOUSURE",Server,HP,SGH732T34D,PO-00198,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-480-01,"HPE SYNERGY 480 GEN10","480 GEN10",Server,HP,SGH113WC3K,KC/APR21-22/120,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-480-02,"HPE SYNERGY 480 GEN10","480 GEN10",Server,HP,SGH113WC3J,KC/APR21-22/120,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-460-02,"HPE BLADE SYSTEM C3000 ENCLOUSURE","C3000 ENCLOUSURE",Server,HP,SGH732T34B,PO-00198,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-480-03,"HPE SYNERGY 480 GEN10","480 GEN10",Server,HP,SGH113WC3M,KC/APR21-22/120,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-480-04,"HPE SYNERGY 480 GEN10","480 GEN10",Server,HP,SGH113WC3L,KC/APR21-22/120,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-460-03,"HPE BLADE SYSTEM C3000 ENCLOUSURE","C3000 ENCLOUSURE",Server,HP,SGH838XSQ4,PO-00198,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-480-05,"HPE SYNERGY 480 GEN10","480 GEN10",Server,HP,SGH233VX2K,KC/SEP22-23/029,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-480-06,"HPE SYNERGY 480 GEN10","480 GEN10",Server,HP,SGH233VX2G,KC/SEP22-23/029,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-460-04,"HPE BLADE SYSTEM C3000 ENCLOUSURE","C3000 ENCLOUSURE",Server,HP,SGH838XSQ6,PO-00198,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-460-05,"HPE BLADE SYSTEM C3000 ENCLOUSURE","C3000 ENCLOUSURE",Server,HP,SGH931T321,PO-00198,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-480-07,"HPE SYNERGY 480 GEN10","480 GEN10",Server,HP,SGH233VX2C,KC/SEP22-23/029,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-480-08,"HPE SYNERGY 480 GEN10","480 GEN10",Server,HP,SGH233VX28,KC/SEP22-23/029,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-480--09,"HPE SYNERGY 480 GEN10","480 GEN10",Server,HP,SGH337JJHP,,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-480-10,"HPE SYNERGY 480 GEN10","480 GEN10",Server,HP,SGH337JJHS,,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-480-11,"HPE SYNERGY 480 GEN10","480 GEN10",Server,HP,SGH337JJHW,,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-480-12,"HPE SYNERGY 480 GEN10","480 GEN10",Server,HP,SGH337JJHZ,,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-460-06,"HPE BLADE SYSTEM C3000 ENCLOUSURE","C3000 ENCLOUSURE",Server,HP,SGH931T31Z,PO-00198,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-460-07,"HPE BLADE SYSTEM C3000 ENCLOUSURE","C3000 ENCLOUSURE",Server,HP,SGH931T323,PO-00198,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
+IT-460-08,"HPE BLADE SYSTEM C3000 ENCLOUSURE","C3000 ENCLOUSURE",Server,HP,SGH931T325,PO-00198,Hyderabad,,,,,"Deployed (deployable)",,,IT-HOD
